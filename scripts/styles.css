@@ -8,28 +8,49 @@ html {
 }
 body {
     font-family: 'Square Peg', cursive;
+    background-color: azure;
 }
 header {
     display: flex;
     justify-content: center;
 }
 h1 {
-    font-size: 8rem;   
+    font-size: 8rem;
+    margin-top: 50px;   
 }
 .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     place-items: center;
-    padding: 20px;
+    padding: 50px;
+    
+    
+    
+    
+}
+.shen{
+    border: 3px solid rgb(60, 0, 255);
+    background-color: rgb(196, 193, 190);
+    border-radius: 30px;
+    
+}
+.img1, .img2, .img3{
+    border-radius: 20px;
+    padding: 10px;
+    
 }
 .container .image {
     border-radius: 20px;
     margin: 20px;
     width: auto;
     height: 500px;
+    
+
+    
 }
 .random-cat-button {
+    margin-top: 50px;
     align-items: center;
     background-color: rgb(228, 164, 94);
     border: 5px solid rgb(249, 151, 66);
