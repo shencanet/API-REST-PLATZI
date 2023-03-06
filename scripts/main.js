@@ -29,8 +29,8 @@ async function loadRandomMichis() {
 async function loadFavouriteMichis() {
   const res = await fetch(API_URL_FAVOTITES);
   const data = await res.json();
-  //console.log('Favoritos')
-  //console.log(data)
+  console.log('Favoritos')
+  console.log(data)
 
   if (res.status !== 200) {
     spanError.innerHTML = "Hubo un error: " + res.status + data.message;
