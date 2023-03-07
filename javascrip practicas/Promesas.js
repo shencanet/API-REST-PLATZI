@@ -135,7 +135,7 @@ Por ejemplo, supongamos que queremos imprimir un mensaje cada 2 segundos. Podemo
 setInterval(() => {
   console.log('Han pasado 2 segundos');
 }, 2000);
-
+/*
 Esto imprimirá “Han pasado 2 segundos” cada 2 segundos.
 
 Es importante tener en cuenta que tanto setTimeout como setInterval son funciones asincrónicas. Esto significa que no bloquean la ejecución del código, lo que permite que otras tareas se ejecuten mientras se espera que se complete la tarea programada.
@@ -144,7 +144,7 @@ Para trabajar con temporizadores en conjunto con promesas, debes entender cómo 
 
 Al crear una promesa con setTimeout(), podemos utilizar el constructor new Promise(). La función interna debe contener el código que se ejecutará en el futuro y, finalmente, llamará a resolve() o reject() para indicar si la tarea se completó correctamente o no.
 
-Un ejemplo de promesa con setTimeout() podría verse así:
+Un ejemplo de promesa con setTimeout() podría verse así:*/
 
 function wait(ms) {
   return new Promise((resolve, reject) => {
@@ -191,3 +191,18 @@ wait(-2000)
 		// El número de milisegundos no puede ser negativo
   });
 
+  //Crea una promesa para mandar emails
+
+  function sendEmail(email, subject, body) {
+    let emailObj = { email, subject, body }
+    return new Promise((resolve, reject) => {
+      if (Object.values(emailObj).some(ele => ele == "")) {
+        reject(new Error("Hacen falta campos para enviar el email"))
+      } else {
+        window.setTimeout(() => {
+          resolve(emailObj)
+        },2000)
+      }
+    })
+  }
+  
