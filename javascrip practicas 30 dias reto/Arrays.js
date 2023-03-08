@@ -32,3 +32,53 @@ const originalArray1 = [1, 2, 3, 4];
 const copiedArray1 = originalArray.concat();
 
 console.log(originalArray1 === copiedArray1); // Output: false
+/*spread operator:
+
+El spread operator es una forma conveniente de hacer una copia de un array. El spread operator se utiliza para expandir los elementos de un array en una lista:*/
+
+const originalArray = [1, 2, 3, 4];
+const copiedArray = [...originalArray];
+
+console.log(originalArray === copiedArray); // Output: false
+//Arrays Bidimensionales
+const matrix = [];
+matrix[0] = [1, 2, 3];
+matrix[1] = [4, 5, 6];
+matrix[2] = [7, 8, 9];
+
+console.log(matrix);
+const matrix = new Array(3);
+for (let i = 0; i < matrix.length; i++) {
+  matrix[i] = new Array(3);
+}
+
+matrix[0][0] = 1;
+matrix[0][1] = 2;
+matrix[0][2] = 3;
+matrix[1][0] = 4;
+matrix[1][1] = 5;
+matrix[1][2] = 6;
+matrix[2][0] = 7;
+matrix[2][1] = 8;
+matrix[2][2] = 9;
+
+console.log(matrix);
+console.log(matrix[1][1]);
+
+const originalMatrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+const copiedMatrix = [...originalMatrix];
+
+console.log(originalMatrix === copiedMatrix);
+/*Además de los arrays bidimensionales, también puedes crear arrays de más dimensiones. Por ejemplo, puedes crear un array tridimensional:*/
+const cube = [];
+for (let i = 0; i < 3; i++) {
+  cube[i] = [];
+	for (let j = 0; j < 3; j++) {
+		cube[i][j] = [];
+		for (let k = 0; k < 3; k++) {
+			cube[i][j][k] = i + j + k;
+		}
+	}
+}
+console.log(cube);
+
