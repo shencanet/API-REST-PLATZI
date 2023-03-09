@@ -33,4 +33,5 @@ const people = [
     ];
     people.sort((a, b) => a.age - b.age);
     console.log(people);
+    
     // Output: [{ name: "Jane", age: 28 }, { name: "John", age: 30 }, { name: "Jim", age: 32 }]
