@@ -29,4 +29,21 @@ const result = values.flatMap(x => x);
 console.log(result);
 // Output: [1, 2, 3, 4, 5]
 
+/*RETO
+En este desafío, tu objetivo es encontrar un valor específico en un array de dos dimensiones.
 
+La función searchValue recibirá dos parámetros: un array bidimensional y un valor a buscar. Tu tarea será implementar la lógica necesaria para encontrar el valor y retornar un objeto con las propiedades row y column que indicarán la posición del valor dentro del array bidimensional.*/
+
+export function searchValue(array, value)
+{
+  let flat = array.flat(1).includes(value);
+  if (!flat)
+    throw new Error("Valor no encontrado");
+
+  let rta;
+  const result = array.map((array, index) => {
+    if (array.includes(value))
+      rta = { row: index, column: array.indexOf(value) }
+  });
+  return rta;
+}
