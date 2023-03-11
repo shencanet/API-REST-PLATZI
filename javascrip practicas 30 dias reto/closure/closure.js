@@ -99,3 +99,8 @@ const countCoins = (coins) => {
 /*Lo que estás haciendo es simplemente bajar un nivel tu scope. Quieres que la función moneyBox regrese una función que estuvo declarada dentro de sí misma porque esa función tiene acceso a ese scope que ya no va a existir para que alguien más lo utilice, solamente lo podrá emplear la función countCoins.
 
 Al guardar el resultado de moneyBox (countCoins) en otra variable estás generando el ámbito léxico que menciona el profesor, necesario para no dejar morir ese scope.*/
+export function sumWithClosure(firstNum = 0) {
+    return function (secondNum = 0) {
+      return firstNum + secondNum
+    }
+  }
