@@ -91,6 +91,7 @@ const countCoins = (coins) => {
         saveCoins += coins;
         console.log(saveCoins);
     }
+    
    // return countCoins;
 //}
 
