@@ -18,6 +18,7 @@ function greeting() {
   const g = greeting();
   console.log(g); 
   console.log(g());
+  //https://www.youtube.com/watch?v=JXG_gQ0OF74
   /*Ámbito léxico
 
 El ámbito léxico se refiere al alcance de una variable siguiendo la cadena de scopes. Una variable se puede abordar desde un nivel inferior hasta uno superior, pero no al contrario.*/
@@ -91,7 +92,7 @@ const countCoins = (coins) => {
         saveCoins += coins;
         console.log(saveCoins);
     }
-    
+
    // return countCoins;
 //}
 
