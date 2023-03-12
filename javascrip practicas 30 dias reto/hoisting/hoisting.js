@@ -101,3 +101,14 @@ saludar = function saludar() {
   return "hola"
 }
 
+/*Hoisting con let y const
+
+Aunque te haya dicho que el hoisting solo ocurre con declaraciones con var, no es totalmente cierto. El hoisting hará que el intérprete de JavaScript eleve las declaraciones con let y const a la Temporal Dead Zone.
+
+La Temporal Dead Zone es una región del código donde la variable está declarada, pero no es posible acceder a esta, provocando un error de tipo ReferenceError.*/
+
+console.log(nameVar) // undefined
+console.log(nameLet) // ReferenceError: nameLet is not defined
+
+var nameVar = "myVar"
+let nameLet = "myLet"
