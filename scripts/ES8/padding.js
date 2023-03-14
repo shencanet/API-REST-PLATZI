@@ -12,6 +12,13 @@ Si la longitud a rellenar es menor que la longitud del string actual, entonces n
 Método padStart
 
 El método padStart completa un string con otro string en el inicio hasta tener un total de caracteres especificado.*/
+const string = "Hola";
+console.log(string.padStart(7, "hi"));
+console.log(string.padEnd(7, "hi"));
+const clasesEs8 = ['00', '01', , '03', '04'];
+
+console.log(clasesEs8);
+console.log(clasesEs8.length);
 
 'abc'.padStart(10) // "       abc"
 'abc'.padStart(10, "foo") // "foofoofabc"
