@@ -20,3 +20,31 @@ const usuario = {
     ...objeto,
     plataforma: "Platzi"
 }
+
+/*Crear copias de objetos utilizando las propiedades de propagación
+
+Semejante a crear copias de arrays utilizando el operador de propagación, se puede realizar copias de objetos en un solo nivel mediante las propiedades de propagación.
+
+De esta manera el segundo objeto tendrá una referencia en memoria diferente al original.*/
+
+const objetoOriginal = {a: 1, b: 2}
+const objetoReferencia = objetoOriginal
+const objetoCopia = {...objetoOriginal}
+
+objetoReferencia === objetoOriginal // true
+objetoOriginal === objetoCopia // false
+
+/*Cuidado con la copia en diferentes niveles de profundidad
+
+El operador de propagación sirve para crear una copia en un solo nivel de profundidad, esto quiere decir que si existen objetos o arrays dentro de un objeto a copiar. Entonces los sub-elementos en cada nivel, tendrán la misma referencia en la copia y en el original.*/
+
+const original = { datos: [1, [2, 3], 4, 5] }
+const copia = { ...original }
+
+original === copia // false
+original["datos"] === copia["datos"] // true
+const original = { datos: [1, [2, 3], 4, 5] }
+const copia = structuredClone(original)
+
+original === copia // false
+original["datos"] === copia["datos"] // false
