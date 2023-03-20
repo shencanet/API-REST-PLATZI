@@ -53,3 +53,6 @@ const aBigNumber = 8907245920742093847n;
 const anotherBigNumber = BigInt(8907245920742093847);
 console.log(aBigNumber);
 console.log(anotherBigNumber);
+
+/*Nullish coalecing (??): Retorna el valor a la derecha solo si la expresión es null o undefined
+Or operato (||): Retorna el valor a la derecha si la expresión de la izquierda es FALSY: 0, ""(str vacío), false, NaN, undefined, null.*/
