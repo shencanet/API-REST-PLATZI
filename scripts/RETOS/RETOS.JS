@@ -31,3 +31,27 @@ En la constante two: (null || "hello" || ""); null es un valor falso "false", la
 En la constante three: (0 || [] || true); el valor 0 es un valor falso "false", mientras que el arreglo "array" vacío es un valor verdadero "true", por lo tanto retornaría el arreglo vacío.
 
 Entonces, la salida de este código sería: (true, "hello", []);*/
+
+function makeMulti(x) {
+  return (y) => x * y;
+}
+
+const five = makeMulti(5);
+const rta = five(6);
+console.log(rta);
+/*Aquí tenemos el escenario de un closure, un closure es:
+
+- Una función que puede recibir un dato y lo almacena en su scope
+- Retorna una función que ocupa ese dato previamente guardado
+
+En este caso estamos haciendo una "fábrica" de multiplicadores.
+
+// five es una función que tiene guardada en su scope la variable x con el valor de 5
+const five = makeMulti(5);
+
+// Ahora podemos pasarle a la función five cualquier valor que queramos multiplicar por 5
+const rta = five(6);
+
+// Podemos hacer más funciones multiplicadoras como:
+const seven = makeMulti(7);
+const two = makeMulti(2); */
