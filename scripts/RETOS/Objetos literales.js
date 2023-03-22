@@ -37,3 +37,27 @@ const propiedades = Object.keys(objeto);
 for (let propiedad of propiedades) {
   console.log(propiedad); // Output: "a", "b", "c"
 }
+
+/*Object.values().
+
+Este método devuelve un array con los valores de todas las propiedades de un objeto, incluyendo las heredadas. Por ejemplo:*/
+const objeto1 = {a: 1, b: 2};
+const objeto2 = Object.create(objeto1);
+objeto2.c = 3;
+console.log(Object.values(objeto2)); // Output: [3, 1, 2]
+
+/*Object.entries().
+
+Este método devuelve un array con los pares clave-valor de todas las propiedades de un objeto, incluyendo las heredadas. Por ejemplo:*/
+const objeto1 = {a: 1, b: 2};
+const objeto2 = Object.create(objeto1);
+objeto2.c = 3;
+console.log(Object.entries(objeto2)); // Output: [["c", 3], ["a", 1], ["b", 2]]
+/*hasOwnProperty().
+
+Este método devuelve un booleano indicando si un objeto tiene una propiedad específica que es de su propiedad, es decir, no heredada. Por ejemplo:*/
+const objeto1 = {a: 1, b: 2};
+const objeto2 = Object.create(objeto1);
+objeto2.c = 3;
+console.log(objeto2.hasOwnProperty("c")); // Output: true
+console.log(objeto2.hasOwnProperty("a")); // Output: false
