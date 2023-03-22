@@ -16,3 +16,24 @@ const objeto = {a: 1, b: 2};
 Object.freeze(objeto);
 objeto.a = 3;
 console.log(objeto.a); // Output: 1
+
+/*Además de Object.assign y Object.freeze, otro método importante es Object.getOwnProperties. Este método devuelve un array con todas las propiedades de un objeto que son de su propiedad, es decir, no heredadas. Por ejemplo:*/
+
+const objeto1 = {a: 1, b: 2};
+const objeto2 = Object.create(objeto1);
+objeto2.c = 3;
+console.log(Object.getOwnProperties(objeto2)); // Output: ["c"]
+//Para iterar sobre las propiedades de un objeto, se puede utilizar un bucle for-in. Por ejemplo:
+const objeto = {a: 1, b: 2, c: 3};
+for (let propiedad in objeto) {
+  console.log(propiedad); // Output: "a", "b", "c"
+}
+//}
+/*
+Otra forma de iterar sobre las propiedades de un objeto es utilizando Object.keys() y un bucle for-of. Por ejemplo:*/
+const objeto = {a: 1, b: 2, c: 3};
+const propiedades = Object.keys(objeto);
+// Object.keys nos da un array con las keys del objeto
+for (let propiedad of propiedades) {
+  console.log(propiedad); // Output: "a", "b", "c"
+}
