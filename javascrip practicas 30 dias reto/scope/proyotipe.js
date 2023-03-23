@@ -17,3 +17,15 @@ Perro.prototype = Object.create(Animals.prototype);
 const perro = new Perro();
 console.log(perro.esVivo); // Output: true
 //También es posible añadir propiedades y métodos específicos a un prototipo:
+Perro.prototype.ladrar = function() { console.log("Guau!"); }
+const perro = new Perro();
+perro.ladrar(); // Output: "Guau!"
+/*Además de crear prototipos y heredar de ellos, es posible editar los prototipos de objetos existentes en JavaScript. Por ejemplo, podemos agregar un método al prototipo de Array para calcular la suma de sus elementos:*/
+Array.prototype.suma = function() { return this.reduce((a, b) => a + b); }
+const numeros = [1, 2, 3, 4, 5];
+console.log(numeros.suma()); // Output: 15
+//7Otro ejemplo, podemos agregar un método al prototipo de String para convertir una cadena a mayúsculas:
+
+String.prototype.mayusculas = function() { return this.toUpperCase(); }
+const nombre = "Juan";
+console.log(nombre.mayusculas()); // Output: "JUAN"
