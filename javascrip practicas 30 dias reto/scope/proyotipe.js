@@ -12,3 +12,8 @@ Animal.prototype.esVivo = true;
 function Perro() {}
 // Esta es la manera de hacer que un objeto "Herede" de otro
 Perro.prototype = Object.create(Animals.prototype);
+//Ahora, cada objeto “Perro” tendrá acceso a la propiedad “esVivo” heredada del prototipo “Animals”:
+
+const perro = new Perro();
+console.log(perro.esVivo); // Output: true
+//También es posible añadir propiedades y métodos específicos a un prototipo:
