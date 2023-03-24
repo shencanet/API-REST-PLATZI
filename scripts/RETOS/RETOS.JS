@@ -87,3 +87,20 @@ Con el bucle for-in, podemos iterar sobre propiedades enumerables. Los enumerabl
 Con un bucle for-of, podemos recorrer iterables. Un arreglo por definición es un iterable, en cada iteración la variable item es igual al elemento sobre el cual se itera en ese momento. Por ello es "☕" "💻" "🍷" "🍫".
 
 En la practica los bucles for-of son más usados y ocacionalmente los bucles for-in.*/
+function greeting() {
+  throw 'Hello world!';
+}
+
+function sayHi() {
+  try {
+    const data = greeting();
+    console.log('It worked!', data);
+  } catch (e) {
+    console.log('Oh no an error!', e);
+  }
+}
+
+sayHi();
+/*La función greeting con la palabra reservada throw genera una excepción de tipo string en el código.
+
+La función sayHi consta de una sentencia try...catch, recordemos que si no hay ningún tipo de excepción el código ejecuta el bloque try pero como si generamos una excepción entonces entramos al bloque catch donde el parámetro e adopta el valor de la excepción, osea, Hello world!. Por eso el resultado es "Oh no an error! Hello world!"*/
