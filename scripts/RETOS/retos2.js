@@ -136,3 +136,8 @@ El método map() crea un nuevo array con los resultados de la llamada a la funci
 const timesThree = (num) => num * 3;
 /*Respuesta Correcta: A) Función Pura
 Una función pura es aquella que, dada una misma entrada, siempre regresa el mismo valor de salida y no tiene otro efecto secundario observable.*/
+function sayHi(name) {
+  return `Hi there, ${name}`;
+}
+console.log(sayHi()); // 🤔?
+/*En javascript los parámetros tienen por defecto el valor undefined, esto quiere decir que sino pasamos ningún parámetro a una función que los necesite tendremos undefined. */
